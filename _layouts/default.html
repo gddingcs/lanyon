@@ -3,8 +3,8 @@
 
   {% include head.html %}
 
-  <body>
-
+  <body style="padding-bottom:120px">
+	
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
@@ -12,16 +12,20 @@
     <div class="wrap">
       <div class="masthead">
         <div class="container">
+<div  style="width:60%;height:40px;float:left;box-sizing:border-box;">
           <h3 class="masthead-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h3>
+</div>
+<div align="right" style="width:40%;height:40px;float:left;box-sizing:border-box;"><img src="{{site.baseurl}}/public/logo.png" height="40" width="168"></div>
         </div>
       </div>
 
       <div class="container content">
         {{ content }}
       </div>
+	
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
