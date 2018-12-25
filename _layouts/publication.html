@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<div class="page">
+  <!--<h1 class="page-title">{{ page.title }}</h1>-->
+  {{ content }}
+<div class="bibtex_structure">
+   <div class="sections bibtextypekey">
+      <div class="section @book">
+         <h2>Books</h2>
+         <div class="sort year" extra="DESC number">
+            <div class="templates"></div>
+         </div>
+      </div>
+      <div class="section @article">
+         <h2>Articles</h2>
+         <div class="sort year" extra="DESC number">
+            <div class="templates"></div>
+         </div>
+      </div>
+      <div class="section @inproceedings">
+         <h2>Conference</h2>
+         <div class="sort year" extra="DESC number">
+            <div class="templates"></div>
+         </div>
+      </div>
+      <div class="section @misc|@phdthesis|@mastersthesis|@bachelorsthesis|@techreport">
+         <h2>Other Publications</h2>
+         <div class="sort year" extra="DESC number">
+            <div class="templates"></div>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="bibtex_display">
+   
+   <div class="if bibtex_template" style="display: none;">
+      <ul>
+         <li style="font-size:15px;">
+            <span class="if title">
+            <span class="title" style="font-weight:bold"></span>,
+            </span>
+            <div class="if author">
+               <span class="author" "><span class="INITIAL_LAST"></span></span>
+            </div>
+            <div>
+               <span class="if journal" ><em><span class="journal"></span></em>,</span>
+               <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+               <span class="if editor"><span class="editor"></span> (editors),</span>
+               <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+               <!--<span class="if !journal number">Technical report <span class="number"></span>,</span>-->
+               <span class="if institution"><span class="institution"></span>,</span>
+               <span class="if address"><span class="address"></span>,</span>
+               <span class="if volume"><span class="volume"></span>,</span>
+               <span class="if journal number">(<span class="number"></span>),</span>
+               <span class="if pages"> pages <span class="pages"></span>,</span>
+               <span class="if month"><span class="month"></span>,</span>
+               <span class="if year"><span class="year"></span>.</span>
+               <span class="if note"><span class="note"></span>.</span>
+            </div>               
+            <div><a class="bibtexVar" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+" aria-expanded="false" aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+               [BibTex]
+               </a> | <a class="bibtexVar" href="{{ site.baseurl }}/papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">[File]</a>
+            </div>
+            <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+               <div class="well">
+                  <pre style="line-height=0.95; font-size:12px; font-style:italic"><span class="bibtexraw noread"></span></pre>
+               </div>
+            </div>
+            <div style="display:none"><span class="bibtextype"></span></div>
+            <div style="display:none"><span class="if topic"><span class="topic"></span></span></div>
+         </li>
+      </ul>
+   </div>
+</div>
+</div>
+
